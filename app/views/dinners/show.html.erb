@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @dinner.time %>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= @dinner.who %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @dinner.number %>
+</p>
+
+
+<%= link_to 'Edit', edit_dinner_path(@dinner) %> |
+<%= link_to 'Back', dinners_path %>

@@ -1,0 +1,27 @@
+<h1>Listing dinners</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Who</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dinners.each do |dinner| %>
+  <tr>
+    <td><%= dinner.time %></td>
+    <td><%= dinner.who %></td>
+    <td><%= dinner.number %></td>
+    <td><%= link_to 'Show', dinner %></td>
+    <td><%= link_to 'Edit', edit_dinner_path(dinner) %></td>
+    <td><%= link_to 'Destroy', dinner, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dinner', new_dinner_path %>
